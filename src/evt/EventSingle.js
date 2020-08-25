@@ -2,9 +2,6 @@
 import React, {useState, useEffect} from 'react'
 import Card from 'react-bootstrap/Card'
 
-
-
-
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
 
@@ -15,7 +12,7 @@ import axios from 'axios'
 
 
 export default function EventDetail({evtLocation, id}) {
-   console.log('event detail running ___________')
+
   
     const [key, setKey] = useState('Description');
     
@@ -29,13 +26,10 @@ export default function EventDetail({evtLocation, id}) {
     useEffect(() => {
         async function getCat(idprop){
     
-            console.log('this cat in ffec', idprop)
+            console.log('event id', idprop)
     
-            const res = await axios.get(`https://api.yelp.com/v3/events/${idprop}`,{
-              headers:{
-              Authorization: `Bearer gA1R_SqY6iK8kZDILXE3SXXYQRyd_AIUgMSGESRz5ViDBx5fNJbiDAt96NinaQTuD0qviy0QObpRb2pE15YKANydaI3IPvm7c2DbT1dnlouU_cMinrI-DZVa8IpBX3Yx`
-          
-              }
+            const res = await axios.post(`https://amplifye-travel-api.herokuapp.com/api/event`,{
+              id : idprop
           })
             
             setNewData(res.data)
@@ -45,13 +39,13 @@ export default function EventDetail({evtLocation, id}) {
             setAddi(`${res.data.results.location.display_address[0]}${res.data.results.location.display_address[1]}`)
         }
         getCat(idprop)
-      }, [id,idprop,setAddi, evtLocation]);
+      }, [idprop, id]);
     
      
         
       let itemsToRender;
     
-    console.log('idevt dat', newdata)
+    
     if (newdata) {
        let resarr = {...newdata.results}
         console.log('data in side ',resarr.name)
@@ -64,7 +58,12 @@ export default function EventDetail({evtLocation, id}) {
        
     
     
-       
+        if (newstobj.latitude && newstobj.longitude){
+          function updatedata(newstobj){
+            evtLocation(newstobj)}
+            
+          
+          }
     
     
     

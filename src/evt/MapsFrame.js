@@ -4,7 +4,7 @@ import ToggleButton from 'react-bootstrap/ToggleButton'
 import Iframe from 'react-iframe'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
-
+import Row from 'react-bootstrap/Row'
 import Button from 'react-bootstrap/Button'
 const Base_url ="https://www.google.com/maps/embed/v1/place?key=AIzaSyCc-_ymQ6Qb3GJoTmwT8yZvK-7y_e7Q9uo&q="
 

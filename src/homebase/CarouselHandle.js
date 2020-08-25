@@ -32,7 +32,7 @@ function Carouselhandle() {
 
 useEffect(() => {
     dispatch(FromAPI());
-  }, [dispatch]);
+  }, [dispatch,]);
 
  
     

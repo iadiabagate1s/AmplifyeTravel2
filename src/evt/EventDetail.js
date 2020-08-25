@@ -31,12 +31,12 @@ export default function AttracEvents() {
 
     const evtLocation = (obj)=>{
        
-        console.log('before set location', obj, location)
+      
         setLocation({
             ...location,
             ...obj
         })
-        console.log( 'after set location ', location)
+       
         
     }
  console.log('this is location before passing', location)

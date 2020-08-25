@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function NearEvtBuis({data}) {
     const classes = useStyles();
-  console.log ('data before map apibus', data)
+
 
     return (
         <>
@@ -61,8 +61,8 @@ export default function NearEvtBuis({data}) {
     <Card.Img style={{height : '30vh'}}  variant="top" src={!spevt.image_url ? '/noimg.png': spevt.image_url}/>
     <Card.Body   >
       
-      <Card.Title ><small style={{textAlign: 'left'}}>{spevt.name}</small></Card.Title>
-              {spevt.categories.map(cat => (<small> {cat.title} </small>))}
+      <Card.Title ><small style={{textAlign: 'left'}}>{spevt.name.slice(0,11)}</small></Card.Title>
+              {spevt.categories.map(cat => (<small> {cat.title.slice(0,7)} </small>))}
       
       <Card.Text  >
       <h6 >{(spevt.distance / 1600).toFixed(1)} miles</h6>

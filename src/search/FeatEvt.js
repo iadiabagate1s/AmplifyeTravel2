@@ -19,10 +19,8 @@ useEffect(() => {
 
         console.log('this cat in ffec', loco)
 
-        const res = await axios.get(`https://api.yelp.com/v3/events/featured?location=${loco}`,{
-            headers:{
-            Authorization: `Bearer gA1R_SqY6iK8kZDILXE3SXXYQRyd_AIUgMSGESRz5ViDBx5fNJbiDAt96NinaQTuD0qviy0QObpRb2pE15YKANydaI3IPvm7c2DbT1dnlouU_cMinrI-DZVa8IpBX3Yx`
-            }
+        const res = await axios.post(`https://amplifye-travel-api.herokuapp.com/api/feature`,{
+            location : loco
             })
         console.log('resi feat --------', res.data)
         setData(res.data)
@@ -34,7 +32,7 @@ useEffect(() => {
    
     
     
-  }, [loco,update, history.location.state]);
+  }, []);
 
  console.log('feature', loco)
  console.log('feature', data)

@@ -29,25 +29,20 @@ export default function CatCont({category}) {
 useEffect(() => {
     async function getCat(catprop){
 
-        console.log('this cat in ffec', catprop)
+       
 
-        const res = await axios.get(`https://api.yelp.com/v3/events?categories=${catprop}&start_date<=${+ new Date}&sort_on=time_start&limit=10`,{
-          headers:{
-          Authorization: `Bearer gA1R_SqY6iK8kZDILXE3SXXYQRyd_AIUgMSGESRz5ViDBx5fNJbiDAt96NinaQTuD0qviy0QObpRb2pE15YKANydaI3IPvm7c2DbT1dnlouU_cMinrI-DZVa8IpBX3Yx`
-          }
+        const res = await axios.post(`https://amplifye-travel-api.herokuapp.com/api/category`,{
+          cat : catprop
       })
-        console.log('res.data', res.data)
+      
         setData(res.data.results)
 
     }
     getCat(catprop)
-  }, [category,catprop]);
-
- console.log('this is ct', category)
-    
+  }, [category]);
 
 
-console.log('category', data)
+
 let itemsToRender;
 if (data) {
   return (
