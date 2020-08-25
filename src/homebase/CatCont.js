@@ -34,8 +34,10 @@ useEffect(() => {
         const res = await axios.post(`https://amplifye-travel-api.herokuapp.com/api/category`,{
           cat : catprop
       })
-      
-        setData(res.data.results)
+      console.log('this is data before map', res.data.results)
+        const maparr = res.data.results.filter(m =>( m.image_url && m.name !== "Velkoobchod oblečení - www.VelkoobchodTextilu.cz" ) )
+        
+        setData(maparr)
 
     }
     getCat(catprop)
