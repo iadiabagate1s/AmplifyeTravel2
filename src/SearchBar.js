@@ -1,14 +1,11 @@
 import React,{useState} from 'react'
-import FormControl from 'react-bootstrap/FormControl'
-import Form from 'react-bootstrap/Form'
-import InputGroup from 'react-bootstrap/InputGroup'
-import Button from 'react-bootstrap/Button'
-import Container from 'react-bootstrap/Container'
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import { useSelector, useDispatch, shallowEqual } from "react-redux";
 
-import {Redirect} from 'react-router-dom'
+import Form from 'react-bootstrap/Form'
+
+import Button from 'react-bootstrap/Button'
+
+import Col from 'react-bootstrap/Col'
+
 import {useHistory} from 'react-router-dom'
 
 import Breadcrumb from 'react-bootstrap/Breadcrumb'
@@ -43,7 +40,7 @@ export default function SearchBar() {
                 state : search
                
             })
-            if (history.location.pathname == '/search'){
+            if (history.location.pathname === '/search'){
                 history.go({
                 pathname: '/search',
                 search :`?term=${search.term}&location=${search.location}`,

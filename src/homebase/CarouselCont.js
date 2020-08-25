@@ -48,7 +48,7 @@ const handleSelect = (selectedIndex, e) => {
                 />
                 </div>
                 <Link to={`/event/${att.id}`}>
-            <a>
+      
                 <Carousel.Caption style={{color: 'blue', backgroundColor :'rgba(250, 204, 210, 0.45)'}}>
                  
                   <h3>{att.name}</h3>
@@ -59,7 +59,7 @@ const handleSelect = (selectedIndex, e) => {
                     
                   </p>
                 </Carousel.Caption>
-                </a> 
+            
               </Link>
               </Carousel.Item>
              

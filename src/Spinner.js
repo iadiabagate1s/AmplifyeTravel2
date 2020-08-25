@@ -2,7 +2,7 @@ import React from 'react'
 import Spinner from 'react-bootstrap/Spinner'
 import Button from 'react-bootstrap/Button'
 
-export default function SpinnerLoad() {
+export default function SpinnerL() {
     return (
         <div>
 

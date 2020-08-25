@@ -1,8 +1,8 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
-import Jumbotron from 'react-bootstrap/Jumbotron'
+
 import Container from 'react-bootstrap/Container'
-import CardGroup from 'react-bootstrap/CardGroup'
+
 import { makeStyles } from '@material-ui/core/styles';
 import {Link} from 'react-router-dom'
 import moment from 'moment'

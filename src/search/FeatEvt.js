@@ -2,26 +2,14 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import {useHistory} from 'react-router-dom'
 
-import { makeStyles } from '@material-ui/core/styles';
 
 
-const useStyles = makeStyles((theme) => ({
- 
- 
-    
-    sportcont:{
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    textAlign : 'center'
-        
-    },
 
-}));
+
 export default function FilmCont({location, selected, update}) {
     
     const [data, setData]= useState([])
-    const classes = useStyles();
+   
     const history = useHistory()
     let loco = location.location
 
@@ -46,7 +34,7 @@ useEffect(() => {
    
     
     
-  }, [loco, history.location.state]);
+  }, [loco,update, history.location.state]);
 
  console.log('feature', loco)
  console.log('feature', data)

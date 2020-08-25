@@ -1,13 +1,12 @@
 import React, {useState, useEffect} from 'react'
-import Carousel from 'react-bootstrap/Carousel'
+
 import CarouselCont from './CarouselCont'
-import axios from 'axios'
+
 import { makeStyles } from '@material-ui/core/styles';
-import {Link} from 'react-router-dom'
-import moment from 'moment'
-import { useSelector, useDispatch, shallowEqual } from "react-redux";
+
+import { useSelector, useDispatch} from "react-redux";
 import {FromAPI} from "../actioncreators";
-import Spinner from '../Spinner'
+import SpinnerL from '../Spinner'
 
 
 
@@ -27,10 +26,7 @@ function Carouselhandle() {
     const dispatch = useDispatch()
     
     const classes = useStyles();
-const [index, setIndex] = useState(0);
-const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-    };
+
 
     
 
@@ -57,7 +53,7 @@ if (data) {
             )
 
 } else {
-  itemsToRender = <Spinner/>;
+  itemsToRender = <SpinnerL/>;
 }
 
 return <div>{itemsToRender}</div>;

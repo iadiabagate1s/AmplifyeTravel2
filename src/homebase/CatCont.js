@@ -1,10 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import EvtAtt from './EvtAtt'
-import { useSelector, useDispatch, shallowEqual } from "react-redux";
-import {catFromAPI} from "../actioncreators";
 import axios from 'axios'
-import spinner from '../Spinner'
+
 
 const useStyles = makeStyles((theme) => ({
  
@@ -68,7 +66,7 @@ if (data) {
             )
 
 } else {
-  itemsToRender = "<Spinner/>";
+  itemsToRender = "...";
 }
 
 return <div>{itemsToRender}</div>;

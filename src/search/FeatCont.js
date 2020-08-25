@@ -10,9 +10,9 @@ import moment from 'moment'
 export default function FeatCont({data}) {
     console.log(data)
     return (
-        <div style={{width : '30vw' ,position: '-webkit-sticky',position: 'sticky',top:'5px'}}>
-
-<Container style={{position: '-webkit-sticky',position: 'sticky'}}>
+        <div style={{width : '30vw' ,position: 'sticky',top:'5px'}}>
+{/* style={{position: '-webkit-sticky',position: 'sticky'}} */}
+<Container >
   <Row>
    
     <Col xs={6} md={6}>

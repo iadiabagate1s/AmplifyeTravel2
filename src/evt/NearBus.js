@@ -32,7 +32,7 @@ useEffect(() => {
 
     }
     getSuggest(coordsobj)
-  }, [lat,lon]);
+  }, [lat,lon,coordsobj]);
 
  console.log('this is ct', coordsobj)
  console.log('category', data)

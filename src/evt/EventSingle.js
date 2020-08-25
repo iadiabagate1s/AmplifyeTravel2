@@ -1,31 +1,25 @@
 
 import React, {useState, useEffect} from 'react'
 import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-import idFromApi from '../actioncreators'
-import { useSelector, useDispatch, shallowEqual } from "react-redux";
-import { makeStyles } from '@material-ui/core/styles';
-import TabContainer from 'react-bootstrap/TabContainer'
-import TabContent from 'react-bootstrap/TabContent'
-import TabPane from 'react-bootstrap/TabPane'
+
+
+
+
 import Tabs from 'react-bootstrap/Tabs'
 import Tab from 'react-bootstrap/Tab'
-import Nav from 'react-bootstrap/Nav'
-import Row from 'react-bootstrap/Row'
+
 import axios from 'axios'
 
 
 
-const useStyles = makeStyles((theme) => ({
 
-}));
 
 export default function EventDetail({evtLocation, id}) {
    console.log('event detail running ___________')
   
     const [key, setKey] = useState('Description');
-    const dispatch = useDispatch()
-    const classes = useStyles();
+    
+    
     const [newdata,setNewData]= useState([])
     const [addi, setAddi] = useState()
     
@@ -51,7 +45,7 @@ export default function EventDetail({evtLocation, id}) {
             setAddi(`${res.data.results.location.display_address[0]}${res.data.results.location.display_address[1]}`)
         }
         getCat(idprop)
-      }, [id,idprop]);
+      }, [id,idprop,setAddi, evtLocation]);
     
      
         
@@ -70,13 +64,7 @@ export default function EventDetail({evtLocation, id}) {
        
     
     
-        if (newstobj.latitude && newstobj.longitude){
-        function updatedata(newstobj){
-          evtLocation(newstobj)}
-          
-        
-        }
-    
+       
     
     
     

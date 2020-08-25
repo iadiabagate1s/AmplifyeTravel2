@@ -1,18 +1,18 @@
 
 import React, {useState} from 'react'
-import Tabs from 'react-bootstrap/Tabs'
+
 import Tab from 'react-bootstrap/Tab'
 import Nav from 'react-bootstrap/Nav'
-import TabContainer from 'react-bootstrap/TabContainer'
-import TabContent from 'react-bootstrap/TabContent'
-import TabPane from 'react-bootstrap/TabPane'
+
+
+
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import CatCont from './CatCont'
 
 export default function NavTab() {
 
-  const CatList = ['music','visual-arts', 'performing-arts', 'film', 'lectures-books', 'fasion','food-and-drinks','festivals-fairs', 'charities', 'sports-active-life','nightlife','kids-family', 'other']
+
   const [key, setKey] = useState('fashion')
  
   console.log(key)
