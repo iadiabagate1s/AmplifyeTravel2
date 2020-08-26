@@ -3,7 +3,7 @@ import moment from 'moment'
 
 
 import Card from 'react-bootstrap/Card'
-
+import {Link} from 'react-router-dom'
 
 import Button from 'react-bootstrap/Button'
 
@@ -20,7 +20,13 @@ export default function SearchData({listdata, update}) {
                             <Card.Text>
                              {listdata.description}
                             </Card.Text>
-                            <Button onClick={()=>(update(listdata))} variant="outline-success">more info</Button>
+                            <Button onClick={()=>(update(listdata))} variant="outline-success">Expand</Button>
+                            <div id='eventdet'><Link to={`/event/${listdata.id}`} >
+       <a>
+    <Button variant="primary">Event Details</Button>
+    </a>
+    </Link></div>
+                      
                           </Card.Body>
                         </Card>
            

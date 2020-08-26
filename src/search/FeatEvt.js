@@ -12,7 +12,7 @@ export default function FilmCont({location, selected, update}) {
    
     const history = useHistory()
     let loco = location.location
-
+//gets a featured event by location
 
 useEffect(() => {
     async function getFeat(loco){

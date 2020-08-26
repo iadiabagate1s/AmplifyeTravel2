@@ -9,7 +9,8 @@ import Nav from 'react-bootstrap/Nav'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import CatCont from './CatCont'
-
+//when a tab is selected a category is sent to state and passes as a prop
+//to next component
 export default function NavTab() {
 
 

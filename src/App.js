@@ -6,10 +6,15 @@ import Home from './homebase/Home'
 import EventDetail from './evt/EventDetail'
 import SearchBar from './SearchBar'
 import Search from './search/Search'
+import { Helmet } from "react-helmet"
 
 function App() {
   return (
     <div>
+       <Helmet htmlAttributes>
+        <html lang="en" />
+        <title>Amplifye</title>
+      </Helmet>
       <BrowserRouter>
       <SearchBar/>
 

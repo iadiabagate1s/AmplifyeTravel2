@@ -26,12 +26,10 @@ function Carouselhandle() {
 
     const [data, setData] = useState([])
     const classes = useStyles();
-
+// get events for carousel 
 
     useEffect(() => {
       async function getCat(catprop){
-  
-         
   
           const res = await axios.get(`https://amplifye-travel-api.herokuapp.com/api/gen`)
     

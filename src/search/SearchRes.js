@@ -16,7 +16,7 @@ export default function SearchRes({formdata, update}) {
 
   console.log( formdata, '======form ------')
 
-
+//get events by category and location 
 useEffect(() => {
     async function getFeat(formdata){
 
@@ -38,7 +38,7 @@ useEffect(() => {
     
   if (data){
     return (
-        <div style={{width :'60vw'}} >
+        <div style={{width :'58vw'}} >
             
         {data.length === 0 ? <div><SpinnerL/></div> : data.map(m => (
 

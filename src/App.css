@@ -137,7 +137,14 @@ html{
   
 }
 
+@media (min-width: 875px) {
+  #eventdet{
+    display: none;
+  }
+ 
 
+  
+}
 
 
 

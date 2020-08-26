@@ -26,7 +26,7 @@ export default function CatCont({category}) {
 
 
     let catprop = category
-
+// get events by from server by category passed as a prop 
 useEffect(() => {
     async function getCat(catprop){
 

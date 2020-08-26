@@ -60,15 +60,12 @@ export default function Search() {
       
         <div>
             
-       
+       /
               <Suspense fallback={<div>...</div>}>
             <FeatEvt location={formdata} update={update}/>
             
          </Suspense>
-
-
-
-          
+ 
 
             <Container fluid>
                 <Row>

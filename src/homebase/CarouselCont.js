@@ -36,7 +36,7 @@ const handleSelect = (selectedIndex, e) => {
       <>
       <Carousel activeIndex={index} onSelect={handleSelect}>
 
-          
+          {/* for every event make a carousel item  */}
           {data.map(att => (
             
                 <Carousel.Item key={att.id}>

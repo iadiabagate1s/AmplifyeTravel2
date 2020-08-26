@@ -6,6 +6,7 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 import moment from 'moment'
+import {Link} from 'react-router-dom'
 
 export default function FeatCont({data}) {
     console.log(data)
@@ -15,7 +16,7 @@ export default function FeatCont({data}) {
 <Container >
   <Row>
    
-    <Col xs={6} md={6}>
+    <Col xs={5} md={5}>
       <div ><Image className='ftpic' src={data.image_url} roundedCircle /></div>
       
     </Col>
@@ -32,8 +33,11 @@ export default function FeatCont({data}) {
     </Card.Text>
     
     <h6>Date: {moment(data.time_start).format('MMMM Do YYYY, h:mm:ss a')}</h6>
-    
-    <Button href={data.tickets_url} variant="primary">Tickets</Button>
+    <Link to={`/event/${data.id}`} >
+  <a>
+    <Button variant="primary">Event Details</Button>
+    </a>
+    </Link>
   </Card.Body>
   <Card.Footer className="text-muted">Cost : <b>${data.cost}</b></Card.Footer>
 </Card>
