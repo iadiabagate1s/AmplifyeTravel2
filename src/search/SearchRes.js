@@ -38,7 +38,8 @@ useEffect(() => {
     
   if (data){
     return (
-        <div style={{width :'58vw'}} >
+        <div className='searchres'>
+          <h4 className='restitle'>Results:</h4>
             
         {data.length === 0 ? <div><SpinnerL/></div> : data.map(m => (
 

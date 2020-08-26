@@ -65,7 +65,9 @@ html{
 
 }
 
-
+.searchres{
+  width: 58vw;
+}
 
 
 
@@ -141,7 +143,28 @@ html{
   #eventdet{
     display: none;
   }
+  .restitle{
+    display: none;
+  }
+  
  
+
+  
+}
+@media (max-width: 875px) {
+  .btcardrow{
+    display: none;
+  }
+  .ftpic{
+    display: none;
+  }
+  .searchres{
+    width: 90vw;
+    margin: 10px 5px;
+  }
+  #expbtn{
+    display: none;
+  }
 
   
 }
