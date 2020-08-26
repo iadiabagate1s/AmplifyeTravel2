@@ -68,11 +68,11 @@ export default function EventDetail({evtLocation, id}) {
     
     
         return (
-            <div>
-                <h1></h1>
+            <div className='evtdiv'>
               
-               <Card style={{width :'30vw', marginLeft : '10px'}}>
-        <Card.Img style={{width : '30vw', height: '50vh'}} variant="top" src={resarr.image_url} alt='public/noimg.png' />
+              
+               <Card className='evtCard' >
+        <Card.Img variant="top" src={resarr.image_url} alt='public/noimg.png' />
         <Card.Body>
           <Card.Text>
             <h3>{resarr.name}</h3>
@@ -86,6 +86,7 @@ export default function EventDetail({evtLocation, id}) {
       <br />
     
       <Tabs
+      className='tab'
           id="controlled-tab-example"
           activeKey={key}
           onSelect={(k) => setKey(k)}

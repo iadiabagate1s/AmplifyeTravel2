@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import { makeStyles } from '@material-ui/core/styles';
 import EvtAtt from './EvtAtt'
 import axios from 'axios'
+import Container from 'react-bootstrap/Container'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -49,11 +50,11 @@ let itemsToRender;
 if (data) {
   return (
 
-       <div className={classes.sportcont}>
+       <Container fluid>
             
             <EvtAtt data={data}/>
             
-        </div>
+        </Container>
     
 
 

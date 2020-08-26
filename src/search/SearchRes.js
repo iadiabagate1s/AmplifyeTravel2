@@ -38,7 +38,7 @@ useEffect(() => {
     
   if (data){
     return (
-        <div >
+        <div style={{width :'60vw'}} >
             
         {data.length === 0 ? <div><SpinnerL/></div> : data.map(m => (
 

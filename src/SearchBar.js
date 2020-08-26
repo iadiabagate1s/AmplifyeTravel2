@@ -53,14 +53,14 @@ export default function SearchBar() {
     
     
     return (
-        <div style={{marginTop : '10px', marginBottom : "15px"}}>
-            <Breadcrumb>
+        <div style={{marginTop : '10px', marginBottom : "20px", backgroundColor: 'white'}}>
+            <Breadcrumb className='bredhome'>
         <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
   
-</Breadcrumb>
+</Breadcrumb >
 <Form  onSubmit={handleSub}>
-<Form.Row>
-    <Col>
+<Form.Row className='formrow'>
+    <Col className='form1'>
       <Form.Control required as='select' onChange={handleChange} type='text' name='term' id='term' value={search.term}  >
          <option value="nightlife">Choose a category</option>
          <option value="music">Music</option>

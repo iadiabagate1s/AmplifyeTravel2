@@ -70,15 +70,15 @@ export default function Search() {
 
           
 
-            <Container>
+            <Container fluid>
                 <Row>
           
-         <Col><FeatCont className={classes.ftevt} data={selected}/></Col>
+         <Col ><FeatCont className={classes.ftevt} data={selected}/></Col>
 
 
          
          <Suspense fallback={<div>...</div>}>
-         <Col><SearchRes formdata={formdata} update={update}/></Col>
+         <Col ><SearchRes formdata={formdata} update={update}/></Col>
          </Suspense>
       
 

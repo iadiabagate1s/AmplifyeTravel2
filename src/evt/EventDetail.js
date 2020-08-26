@@ -61,23 +61,24 @@ export default function AttracEvents() {
             
            <Row>
           
-            <Suspense fallback={<h1>...</h1>}>
-          <Col md={4}><EventSingle evtLocation = {evtLocation} id={params.eventid}/></Col>
-         </Suspense>
+            
+          <Col md={4}>
+          <Suspense fallback={<h1>...</h1>}>
+              <EventSingle evtLocation = {evtLocation} id={params.eventid}/>
+          </Suspense>
+          
+          
+        </Col>
          
          
-       <Col md={{ span: 6, offset: 1 }}> <MapsFrame frominput={frominput} enterFrom={enterFrom} desti={location} /></Col>
+         
+       <Col> <MapsFrame frominput={frominput} enterFrom={enterFrom} desti={location} /></Col>
         </Row>
-
-
         <Suspense fallback={<h1>...</h1>}>
             <NearBus lat ={location.latitude} lon = {location.longitude}/>
         </Suspense>
-         
-         
-       
-        
-         
+
+
         </Container>
 
 

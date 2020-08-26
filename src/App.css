@@ -1,38 +1,207 @@
-.App {
-  text-align: center;
+html{
+  background-color: rgb(255, 255, 255);
+}
+.formrow{
+  background-color: rgb(255, 255, 255);
+}
+.bredhome{
+  color: rgb(255, 255, 255);
+}
+.form1{
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* div around all cards cont  */
+.supercont{
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+  
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+/* container of all the cards  */
+.wrapper{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 70vh;
+  width: 95%;
+  margin-top: 1.5rem;
+  max-width: 95%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  
+  
+
+}
+/* personal div around each card */
+.divcard{
+  height: 45vh;
+  width: 70vw;
+  margin-top: 10vh;
+  margin-bottom: 30vh;
+  
+  
 }
 
-.App-link {
-  color: #61dafb;
+.item{
+  height: 70vh;
+  width: 30vw;
+  margin-right: 2rem;
+
+}
+.cardbod{
+  height: 20vh;
+  margin: 15px;
+}
+.cardfoot{
+  height: 15vh;
+  margin: 15px;
+}
+.map{
+  width: 50vw;
+  margin-top: 1rem;
+  margin-left: 3rem;
+  
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+
+
+
+
+/* card div cont  */
+.it{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 90vh;
+  width: 95%;
+  margin-top: 1.5rem;
+  max-width: 95%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  
+
+}
+/* carddiv */
+.cd{
+  height: 65vh;
+  width: 90vw;
+  margin-top: 10vh;
+  margin-bottom: 30vh;
+  margin-right: 1.5rem;
+}
+/* card */
+.cb{
+  height: 70vh;
+  margin-right: 2rem;
+
+
+}
+/* body  */
+.imbod{
+  height: 95vh;
+  margin: 15px;
+  line-height: 1rem;
+
+
+}
+
+@media (max-width: 745px){
+  .ftpic{
+    width:50vw ;
+    height:60vh;
+    text-align :center;
+    margin-left: 60px;
+
   }
-  to {
-    transform: rotate(360deg);
+
+}
+
+
+@media (min-width: 745px) {
+  .ftpic{
+    width:30vw ;
+    height:40vh;
+    text-align :center
+
   }
+  
+  .btcardrow{
+    width : 30vw
+  
+  }
+
+  
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 745px) {
+
+  .map{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-right: 30rem;
+    
+    width: 100%;
+  }
+}
+
+
+
+@media (max-width: 745px) {
+
+  .wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 90vh;
+    width: 95%;
+    margin-top: 1px;
+    max-width: 95%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    
+    
+  
+  }
+  /* personal div around each card */
+  .divcard{
+
+    height: 82vh;
+    width: 75vw;
+    margin-top: 1vh;
+    margin-bottom: 4vh;
+    
+    
+  }
+  
+  .item{
+    height: 82vh;
+    width: 55vw;
+    
+  
+  }
+  .cardbod{
+    height: 5vh;
+    margin: 1px;
+    
+  }
+  .cardfoot{
+    height: 10vh;
+    margin: 1px;
+    line-height: 15px;
+  }
+  
 }

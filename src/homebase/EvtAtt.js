@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
 
-import Container from 'react-bootstrap/Container'
+
 
 import { makeStyles } from '@material-ui/core/styles';
 import {Link} from 'react-router-dom'
@@ -21,13 +21,12 @@ const useStyles = makeStyles((theme) => ({
         whiteSpace : 'nowrap',
         marginTop : '20px',
         
-       
         overflowX: 'auto',
         overflowY: 'hidden',
       },
       itemscl :{
-        height: '60vh',
-        width: '30vw',
+        height: '50vh',
+        width: '50vw',
         maxWidth : '50vw',
         
         background: 'white',
@@ -49,28 +48,23 @@ export default function EvtAtt({data}) {
 
     return (
         <>
-        <Container fluid>
-         <div className={classes.imagecontainer}>
+        <div className='supercont' >
+         <div className='it'>
          
         
                  {data.map(spevt => (
                     
-<div className={classes.itemscl}>
+<div className='divcard'>
 <Link to={`/event/${spevt.id}`} >
   <a>
-  <Card key={spevt.id} style={{display: 'block', width: '30vw',wordWrap: 'break-word', height:'40vh', textAlign:'center'}}>
-    <Card.Img style={{height : '45vh'}}  variant="top" src={!spevt.image_url ? ('public/noimg.png'):(spevt.image_url)} />
-    
- 
-
-
-
-    <Card.Body style={{maxWidth: '60vw',wordWrap: 'break-word', height:'15vh'}} >
+  <Card className='item' key={spevt.id} >
+    <Card.Img style={{height:'35vh'}} variant="top" src={spevt.image_url} />
+    <Card.Body className='cardbod'>
       <Card.Title >{spevt.location.city}, {spevt.location.state}</Card.Title>
-      <small>{spevt.name.slice(0,21)}</small>
+      <small>{spevt.name}</small>
   
     </Card.Body>
-    <Card.Footer>
+    <Card.Footer className='cardfoot'>
       <small className="text-muted"><b>Date </b>{moment(spevt.time_start).format('MMMM Do YYYY, h:mm:ss a')}</small>
     </Card.Footer>
   </Card>
@@ -81,7 +75,7 @@ export default function EvtAtt({data}) {
           ))}
 
           </div> 
-          </Container>
+          </div>
         
         </>
     )

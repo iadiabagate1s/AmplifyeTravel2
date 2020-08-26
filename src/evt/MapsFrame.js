@@ -43,9 +43,9 @@ const handleSubmit= (e)=>{
     console.log('hotelurl comb', hotelurl)
     
     return (
-        <div>
+        <div className='map'>
 
-<ToggleButtonGroup style={{bg : 'green'}} type="checkbox" value={value} onClick={(e)=> (setValue(e.target.value))} >
+<ToggleButtonGroup style={{}} type="checkbox" value={value} onClick={(e)=> (setValue(e.target.value))} >
       <ToggleButton value='placething'>Event</ToggleButton>
       <ToggleButton value='hotels'>Hotels</ToggleButton>
     </ToggleButtonGroup>
@@ -60,8 +60,8 @@ const handleSubmit= (e)=>{
                 <>
                 
             <Iframe style={{marginRight:'5px'}} url={url}
-            width="550px"
-            height="450px"
+            width="650px"
+            height="550px"
             id="myId"
             className="myClassname"
             display="initial"
@@ -75,7 +75,7 @@ const handleSubmit= (e)=>{
       <Form.Control onChange={handleChnage} name='inputloco' placeholder='enter from location' value={input} />
     </Col>
     <Col>
-      <Button onClick={handleSubmit} > Get Distance</Button>
+      <Button style={{height : '2.2rem'}} onClick={handleSubmit} >Distance</Button>
     </Col>
   </Form.Row>
 </Form>

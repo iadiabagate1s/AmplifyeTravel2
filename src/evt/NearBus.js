@@ -1,5 +1,6 @@
 import React,{useState, useEffect} from 'react'
 import axios from 'axios'
+import Container from 'react-bootstrap/Container'
 
 
 import NearEvtBuis from './NearEvtBuis'
@@ -40,12 +41,14 @@ useEffect(() => {
 
      
       <div>
-            <h1>Popular Places Nearby</h1>
+        <h1>Popular Places Nearby</h1>
             <NearEvtBuis data={data} />
+      </div>
+            
 
 
             
-        </div>
+       
  
  
  

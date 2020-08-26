@@ -19,15 +19,12 @@ const useStyles = makeStyles((theme) => ({
         whiteSpace : 'nowrap',
         marginTop : '7px',
         border :'1px solid black',
-        
-       
         overflowX: 'auto',
         overflowY: 'hidden',
       },
       itemscl :{
         height: '55vh',
         width: '30vw',
-        
         background: 'white',
         margin: '3px',
         display: 'inline-block',
@@ -48,21 +45,21 @@ export default function NearEvtBuis({data}) {
 
     return (
         <>
-        <Container fluic >
+        <div className='supercont'>
         
-         <div className={classes.imagecontainer}>
+         <div className='wrapper'>
          
         
                  {data.map(spevt => (
                     
 
-<div className={classes.itemscl}>
-  <Card key={spevt.id} style={{height :'55vh',width:'27vw', margin :'5px',boxShadow: '10px 10px 5px 0px rgba(0,0,0,0.75)' }} >
-    <Card.Img style={{height : '30vh'}}  variant="top" src={!spevt.image_url ? '/noimg.png': spevt.image_url}/>
-    <Card.Body   >
+<div className='cd'>
+  <Card key={spevt.id} className='card' >
+    <Card.Img style={{height : '35vh', width: '40vw'}}  variant="top" src={!spevt.image_url ? '/noimg.png': spevt.image_url}/>
+    <Card.Body className='imbod'  >
       
-      <Card.Title ><small style={{textAlign: 'left'}}>{spevt.name.slice(0,11)}</small></Card.Title>
-              {spevt.categories.map(cat => (<small> {cat.title.slice(0,7)} </small>))}
+      <Card.Title ><small >{spevt.name}</small></Card.Title>
+              {spevt.categories.map(cat => (<small> {cat.title} </small>))}
       
       <Card.Text  >
       <h6 >{(spevt.distance / 1600).toFixed(1)} miles</h6>
@@ -77,7 +74,7 @@ export default function NearEvtBuis({data}) {
 
           </div> 
             
-          </Container>
+          </div>
         </>
     )
 }
