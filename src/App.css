@@ -44,8 +44,8 @@ html{
 }
 
 .item{
-  height: 70vh;
-  width: 30vw;
+  height: 90vh;
+  width: 20vw;
   margin-right: 2rem;
 
 }
@@ -113,7 +113,7 @@ html{
 
 @media (max-width: 745px){
   .ftpic{
-    width:50vw ;
+    width:30vw ;
     height:60vh;
     text-align :center;
     margin-left: 60px;
@@ -151,7 +151,7 @@ html{
 
   
 }
-@media (max-width: 875px) {
+@media (max-width: 1005px) {
   .btcardrow{
     display: none;
   }
@@ -190,7 +190,7 @@ html{
 
 
 
-@media (max-width: 745px) {
+@media (max-width: 1005px) {
 
   .wrapper{
     display: flex;
@@ -209,17 +209,18 @@ html{
   /* personal div around each card */
   .divcard{
 
-    height: 82vh;
-    width: 75vw;
+    height: 85vh;
+    width: 30vw;
     margin-top: 1vh;
     margin-bottom: 4vh;
+    margin-right: 15vw;
     
     
   }
   
   .item{
-    height: 82vh;
-    width: 55vw;
+    height: 90vh;
+    width: 40vw;
     
   
   }
