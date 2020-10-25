@@ -58,7 +58,7 @@ export default function EvtAtt({data}) {
 <Link to={`/event/${spevt.id}`} >
   <a>
   <Card className='item' key={spevt.id} >
-    <Card.Img style={{height:'35vh'}} variant="top" src={spevt.image_url} />
+    <Card.Img style={{height:'33vh'}} variant="top" src={spevt.image_url} />
     <Card.Body className='cardbod'>
       <Card.Title >{spevt.location.city}, {spevt.location.state}</Card.Title>
       <small>{spevt.name}</small>

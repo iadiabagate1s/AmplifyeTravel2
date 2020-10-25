@@ -59,9 +59,7 @@ const handleSubmit= (e)=>{
             return (
                 <>
                 
-            <Iframe style={{marginRight:'5px'}} url={url}
-            width="650px"
-            height="550px"
+            <Iframe url={url}
             id="myId"
             className="myClassname"
             display="initial"
@@ -86,9 +84,8 @@ const handleSubmit= (e)=>{
     case 'directions':
         return (<>
                 
-                <Iframe style={{marginRight: "10px"}} url={urlDirec}
-                width="550px"
-                height="450px"
+                <Iframe  url={urlDirec}
+                
                 id="myId"
                 className="myClassname"
                 display="initial"
@@ -114,9 +111,8 @@ const handleSubmit= (e)=>{
         return (
             <>
             
-                <Iframe style={{marginRight: "10px"}} url={hotelurl}
-                width="550px"
-                height="450px"
+                <Iframe  url={hotelurl}
+               
                 id="myId"
                 className="myClassname"
                 display="initial"
