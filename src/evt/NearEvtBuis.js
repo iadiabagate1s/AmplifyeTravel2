@@ -55,7 +55,7 @@ export default function NearEvtBuis({data}) {
 
 <div className='cd'>
   <Card key={spevt.id} className='card' >
-    <Card.Img style={{height : '35vh', width: '23vw'}}  variant="top" src={!spevt.image_url ? '/noimg.png': spevt.image_url}/>
+    <Card.Img className='nearpic'   variant="top" src={!spevt.image_url ? '/noimg.png': spevt.image_url}/>
     <Card.Body className='imbod'  >
       
       <Card.Title ><small >{spevt.name}</small></Card.Title>

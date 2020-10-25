@@ -245,11 +245,26 @@ Iframe{
   width: 55vw;
   height: 24rem;
 }
+.nearpic{
+  height : 35vh;
+  width: 23vw;
+
+}
 
 @media(max-width :765px ){
 
   Iframe{
-    width: 85vw;
+  
+    width: 95vw;
     height: 25rem;
+  }
+  .map{
+   margin: auto;
+  }
+  .cd{
+    width: 65vw;
+  }
+  .nearpic{
+    width: 64vw;
   }
 }
